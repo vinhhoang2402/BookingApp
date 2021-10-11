@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:padding="4dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_horizontal">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container"
+        android:gravity="center_horizontal"
+        android:layout_height="@dimen/dimen_400dp_h"
+        android:paddingTop="@dimen/dimen_40dp_h"
+        android:paddingStart="@dimen/dimen_20dp_w"
+        android:paddingEnd="@dimen/dimen_20dp_w"
+        android:layout_width="match_parent"
+        android:background="@drawable/border_radius_dialog"
+        tools:ignore="MissingConstraints">
+        <TextView
+            android:id="@+id/title_welcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="@font/robotoblack"
+            android:textSize="@dimen/dimen_25sp"
+            tools:text="Welcome back"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/des_welcome"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="@font/robotoitalic"
+            android:gravity="center_horizontal"
+            android:textSize="@dimen/dimen_17sp"
+            tools:text="Please enter your email to continue"
+            android:layout_marginTop="@dimen/dimen_10dp_h"
+            app:layout_constraintTop_toBottomOf="@+id/title_welcome"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_50dp_h"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="@font/robotolight"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/dimen_17sp"
+            android:background="@drawable/border_radius_input"
+            tools:text="vinhthontay113@gmail.com"
+            android:layout_marginTop="@dimen/dimen_40dp_h"
+            android:paddingStart="@dimen/dimen_60dp_w"
+            app:layout_constraintTop_toBottomOf="@+id/des_welcome"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <ImageView
+            android:id="@+id/icon_email"
+            android:src="@drawable/ic_baseline_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_20dp_w"
+            app:layout_constraintTop_toTopOf="@id/email"
+            app:layout_constraintBottom_toBottomOf="@id/email"
+            app:layout_constraintStart_toStartOf="@+id/email"/>
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_50dp_h"
+            android:layout_marginTop="@dimen/dimen_20dp_h"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="@font/robotolight"
+            android:gravity="center_vertical"
+            android:inputType="textPassword"
+            android:background="@drawable/border_radius_input"
+            android:textSize="@dimen/dimen_17sp"
+            tools:text="***********"
+            android:paddingStart="@dimen/dimen_60dp_w"
+            app:layout_constraintTop_toBottomOf="@+id/email"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <ImageView
+            android:id="@+id/icon_password"
+            android:src="@drawable/ic_baseline_security"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_20dp_w"
+            app:layout_constraintTop_toTopOf="@id/password"
+            app:layout_constraintBottom_toBottomOf="@id/password"
+            app:layout_constraintStart_toStartOf="@+id/password"/>
+
+        <TextView
+            android:id="@+id/forgot_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="@font/robotolight"
+            android:gravity="center_horizontal"
+            android:textSize="@dimen/dimen_15sp"
+            android:textStyle="bold"
+            tools:text="Forgot password ?"
+            android:layout_marginTop="@dimen/dimen_10dp_h"
+            app:layout_constraintTop_toBottomOf="@+id/password"
+            app:layout_constraintEnd_toEndOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <EditText
+        android:id="@+id/sign_in"
+        android:layout_width="@dimen/dimen_350dp_w"
+        android:layout_height="@dimen/dimen_50dp_h"
+        android:layout_gravity="center_horizontal"
+        android:fontFamily="@font/robotolight"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="430dp"
+        android:textSize="@dimen/dimen_17sp"
+        android:background="@drawable/border_radius_radient_input"
+        tools:text="Sign in"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="MissingConstraints" />
+</androidx.constraintlayout.widget.ConstraintLayout>

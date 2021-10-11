@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">BookingApp</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="btn_boarding">On boarding</string>
+    <string name="btn_sign_in">Sign in</string>
+    <string name="btn_sign_up">Sign up</string>
+    <string name="btn_list">List</string>
+    <string name="btn_home">Home</string>
+    <string name="btn_location">Location</string>
+
+    <string name="latLong">Longitude: %.3f, Latitude: %.3f</string>
+    <string name="enable_gps">Please enable your gps</string>
+    <string name="permission_request">App requires location permission</string>
+</resources>
