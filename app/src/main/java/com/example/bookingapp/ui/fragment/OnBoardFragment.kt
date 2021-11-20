@@ -5,13 +5,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
-import com.example.bookingapp.R
+import androidx.viewpager2.widget.CompositePageTransformer
+import androidx.viewpager2.widget.MarginPageTransformer
 import com.example.bookingapp.databinding.FragmentBoardingBinding
 import com.example.bookingapp.ui.adapter.OnBoardingPagerAdapter
 import com.example.bookingapp.ui.animation.DepthPageTransformer
 import com.google.android.material.tabs.TabLayoutMediator
 import kotlinx.android.synthetic.main.fragment_boarding.*
+
 
 class OnBoardFragment : Fragment() {
 
@@ -32,7 +33,8 @@ class OnBoardFragment : Fragment() {
         TabLayoutMediator(tabLayout, viewPager) { tab, position ->
 
         }.attach()
-
+        val compositePageTransformer = CompositePageTransformer()
+        compositePageTransformer.addTransformer(MarginPageTransformer(40))
         viewPager.setPageTransformer(DepthPageTransformer())
     }
 }
