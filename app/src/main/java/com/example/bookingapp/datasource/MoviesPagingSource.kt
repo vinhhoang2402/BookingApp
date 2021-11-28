@@ -20,7 +20,7 @@ class GetMoviesFlowPagingSource(
         Log.d("aaaaaaaa", "position : $position")
 
         return try {
-            service.popularMovieRx(
+            service.MovieRx(
                 apiKey = apiKey,
                 language = locale.language,
                 page = position

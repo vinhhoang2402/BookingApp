@@ -31,7 +31,7 @@ class MoviesMapper {
                         it.overview,
                         it.releaseDate?.let { date ->
                             if (date.isNotEmpty()) {
-                                SimpleDateFormat("YYYY-mm-dd", locale).parse(date)
+                                SimpleDateFormat("yyyy-mm-dd", locale).parse(date)
                             } else {
                                 null
                             }

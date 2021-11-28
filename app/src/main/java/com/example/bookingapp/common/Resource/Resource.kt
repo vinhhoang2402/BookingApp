@@ -3,19 +3,21 @@ package com.example.bookingapp.common.Resource
 import okhttp3.ResponseBody
 
 
-sealed class Resource<out T> {
+data class Resource<out T>(val status: Status, val data: T?, val message: String?) {
 
-    data class Success<out T>(val value: T) : Resource<T>()
+    companion object {
 
-    data class Failure(
-        val isNetworkError: Boolean,
-        val errorCode: Int?,
-        val errorResponse: ResponseBody?
-    ) : Resource<Nothing>()
+        fun <T> success(data: T?): Resource<T> {
+            return Resource(Status.SUCCESS, data, null)
+        }
 
-    data class Loading(
-        val success: Boolean,
-        val error: Boolean,
-        val loading: Boolean
-    ) : Resource<Nothing>()
+        fun <T> error(msg: String, data: T?): Resource<T> {
+            return Resource(Status.ERROR, data, msg)
+        }
+
+        fun <T> loading(data: T?): Resource<T> {
+            return Resource(Status.LOADING, data, null)
+        }
+
+    }
 }

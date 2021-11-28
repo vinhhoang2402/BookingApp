@@ -31,7 +31,7 @@ class MainFragment : Fragment() {
         mainBinding.btnLocation.setOnClickListener { navController(R.id.action_mainFragment_to_mapsFragment) }
         mainBinding.btnOnBoarding.setOnClickListener { navController(R.id.action_mainFragment_to_onBoardFragment) }
         mainBinding.btnSignIn.setOnClickListener { navController(R.id.action_mainFragment_to_signInFragment) }
-        mainBinding.btnSignUp.setOnClickListener { navController(R.id.action_mainFragment_to_signInFragment) }
+        mainBinding.btnSignUp.setOnClickListener { navController(R.id.action_mainFragment_to_nestedFragment) }
     }
 
     private fun navController(resId : Int) {
