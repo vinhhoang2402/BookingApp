@@ -27,7 +27,8 @@ class MainFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         mainBinding.btnHome.setOnClickListener { navController(R.id.action_mainFragment_to_homeFragment) }
-        mainBinding.btnList.setOnClickListener { navController(R.id.action_mainFragment_to_homeFragment) }
+        mainBinding.btnBoarding2.setOnClickListener { navController(R.id.action_mainFragment_to_onBoarding2Fragment) }
+        mainBinding.btnBoarding3.setOnClickListener { navController(R.id.action_mainFragment_to_onBoard3Fragment) }
         mainBinding.btnLocation.setOnClickListener { navController(R.id.action_mainFragment_to_mapsFragment) }
         mainBinding.btnOnBoarding.setOnClickListener { navController(R.id.action_mainFragment_to_onBoardFragment) }
         mainBinding.btnSignIn.setOnClickListener { navController(R.id.action_mainFragment_to_signInFragment) }

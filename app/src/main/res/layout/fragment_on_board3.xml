@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/dimen_10dp_w"
+    tools:context=".ui.fragment.OnBoard3Fragment">
+
+    <LinearLayout
+        android:id="@+id/layout_top"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:weightSum="4"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <ImageView
+            android:layout_width="@dimen/dimen_50dp_w"
+            android:layout_height="wrap_content"
+            android:src="@drawable/logo" />
+
+        <Space
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:layout_weight="3"
+            android:orientation="horizontal"
+            android:gravity="end"
+            android:layout_gravity="center"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="help"
+                android:textStyle="bold"
+                android:textColor="@color/Black_Cat"
+                android:layout_marginEnd="@dimen/dimen_20dp_w"
+                android:textAllCaps="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:text="Ok, choose 3 you like"
+        android:layout_marginTop="@dimen/dimen_15dp_h"
+        android:layout_marginBottom="@dimen/dimen_15dp_h"
+        android:textStyle="bold"
+        android:textSize="@dimen/dimen_20sp"
+        android:textColor="@color/Black"
+        android:layout_marginEnd="@dimen/dimen_20dp_w"
+        android:textAllCaps="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:text="This helps us suggest shows and movies you'll love. Psst... not everything below is avaliable in the free experience"
+        android:layout_marginEnd="@dimen/dimen_20dp_w"
+        android:textAllCaps="true"
+        android:layout_marginBottom="@dimen/dimen_15dp_h"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:text="Continue"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:textColor="@color/White"
+        android:layout_marginBottom="@dimen/dimen_15dp_h"
+        android:background="@color/Gray_Cloud"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_50dp_h"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:background="@color/Aquamarine"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

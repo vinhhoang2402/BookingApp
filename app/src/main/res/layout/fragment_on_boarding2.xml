@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="@dimen/dimen_10dp_w"
+        android:background="@color/Black"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <LinearLayout
+            android:id="@+id/layout_top"
+            android:orientation="horizontal"
+            android:gravity="center"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:weightSum="4"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <ImageView
+                android:layout_width="@dimen/dimen_50dp_w"
+                android:layout_height="wrap_content"
+                android:src="@drawable/logo" />
+
+            <Space
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:layout_weight="3"
+                android:orientation="horizontal"
+                android:gravity="end"
+                android:layout_gravity="center"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="help"
+                    android:textStyle="bold"
+                    android:textColor="@color/White"
+                    android:layout_marginEnd="@dimen/dimen_20dp_w"
+                    android:textAllCaps="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:text="sign in"
+                    android:textStyle="bold"
+                    android:textColor="@color/White"
+                    style="@style/textview_on_board"
+                    android:textAllCaps="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_bottom"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:text="Enter a password"
+                android:textStyle="bold"
+                android:textSize="@dimen/dimen_24dp_h"
+                android:textColor="@color/White"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:text="Create a free account to start watching"
+                android:textColor="@color/White"
+                android:layout_marginTop="@dimen/dimen_15dp_h"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:hint="Email"
+                android:paddingStart="@dimen/dimen_10dp_w"
+                android:layout_marginTop="@dimen/dimen_20dp_h"
+                android:layout_marginBottom="@dimen/dimen_10dp_h"
+                android:background="@color/Battleship_Gray"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_50dp_h"/>
+
+            <EditText
+                android:hint="Password"
+                android:paddingStart="@dimen/dimen_10dp_w"
+                android:layout_marginBottom="@dimen/dimen_20dp_h"
+                android:background="@color/White"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_50dp_h"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_50dp_h">
+
+                <CheckBox
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="-5dp"
+                    android:paddingTop="-5dp" />
+
+                <TextView
+                    android:text="Please do not email me Nexflix speacial offers"
+                    android:layout_marginStart="@dimen/dimen_20dp_w"
+                    android:textColor="@color/White"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" />
+            </LinearLayout>
+
+            <TextView
+                android:text="By clicking below you agree to our Tearms of Use, Privacy Statement, and that you are over 18."
+                android:textColor="@color/White"
+                android:layout_marginBottom="@dimen/dimen_15dp_h"
+                android:layout_marginTop="@dimen/dimen_15dp_h"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_50dp_h">
+
+                <CheckBox
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="-5dp"
+                    android:paddingTop="-5dp" />
+
+                <TextView
+                    android:text="I agree I am over 18. (required)"
+                    android:layout_marginStart="@dimen/dimen_20dp_w"
+                    android:textColor="@color/White"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" />
+            </LinearLayout>
+
+            <TextView
+                android:text="You must agree to the required terms to proceed."
+                android:textColor="@color/White"
+                android:layout_marginTop="@dimen/dimen_15dp_h"
+                android:layout_marginBottom="@dimen/dimen_20dp_h"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:text="Ceate Account"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:textColor="@color/White"
+                android:background="@color/Red_Wine"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_50dp_h"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

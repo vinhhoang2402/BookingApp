@@ -33,10 +33,16 @@
             android:text="@string/btn_home" />
 
         <Button
-            android:id="@+id/btn_list"
+            android:id="@+id/btn_boarding_2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/btn_list" />
+            android:text="Boarding2" />
+
+        <Button
+            android:id="@+id/btn_boarding_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Boarding3" />
 
         <Button
             android:id="@+id/btn_location"
