@@ -47,4 +47,10 @@ interface Api {
         @Query("api_key") apiKey: String,
         @Query("language") language: String
     ): MoviesResponse
+
+    @GET("movie/now_playing")
+    suspend fun latestMovieRx(
+        @Query("api_key") apiKey: String,
+        @Query("language") language: String
+    ): MoviesResponse
 }

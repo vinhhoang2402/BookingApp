@@ -16,5 +16,7 @@ class MovieRepositoryImp(private val movieDataSource: MovieDataSource): MovieRep
         return movieDataSource.getTrendDataSource()
     }
 
-
+    override suspend fun getLatestRepo(): MoviesResponse {
+        return movieDataSource.getLatestDataSource()
+    }
 }

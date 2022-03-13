@@ -7,4 +7,5 @@ interface MovieRepository {
     suspend fun getPopularRepo(): MoviesResponse
     suspend fun getRateRepo(): MoviesResponse
     suspend fun getTrendRepo(): MoviesResponse
+    suspend fun getLatestRepo(): MoviesResponse
 }

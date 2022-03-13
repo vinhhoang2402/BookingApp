@@ -22,10 +22,23 @@ class MovieViewModel(private val repository: MovieRepository) : ViewModel() {
     val trend: LiveData<Resource<MoviesResponse>>
         get() = _mTrend
 
+    private val _mLatest= MutableLiveData<Resource<MoviesResponse>>()
+    val latest: LiveData<Resource<MoviesResponse>>
+        get() = _mLatest
+
     init {
         getPopular()
         getRate()
         getTrend()
+        getLatest()
+    }
+
+    private fun getLatest() {
+        viewModelScope.launch {
+            repository.getLatestRepo().let {
+                _mLatest.postValue(Resource.success(it))
+            }
+        }
     }
 
     private fun getTrend() {

@@ -1,16 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
 
-        <TextView
-            android:id="@+id/title"
-            android:text="title"
-            android:textSize="20sp"
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_image"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen_6dp_w"
+            app:cardCornerRadius="4dp">
+
+            <ImageView
+                android:id="@+id/image"
+                android:scaleType="centerCrop"
+                android:layout_width="@dimen/dimen_120dp_w"
+                android:layout_height="@dimen/dimen_140dp_h"/>
+        </androidx.cardview.widget.CardView>
 
     </LinearLayout>
 </layout>

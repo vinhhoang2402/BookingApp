@@ -27,4 +27,10 @@ class MovieDataSource(
             apiKey = apiKey,
             language = locale.language)
     }
+
+    suspend fun getLatestDataSource(): MoviesResponse {
+        return api.latestMovieRx(
+            apiKey = apiKey,
+            language = locale.language)
+    }
 }

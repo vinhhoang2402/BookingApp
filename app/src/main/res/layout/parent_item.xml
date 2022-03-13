@@ -1,8 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout>
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <LinearLayout
+        android:orientation="vertical"
+        xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/title"
+            android:text="Title"
+            android:textSize="@dimen/dimen_24sp"
+            android:fontFamily="@font/robotoblack"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rc_parent"
             android:layout_width="match_parent"
